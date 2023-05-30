@@ -1,0 +1,15 @@
+<div *ngIf="user">
+  <h2>{{ user.name | uppercase }} Details</h2>
+  <hr/>
+  <div>
+    <p>Name: <input [(ngModel)]="user.name" placeholder="User Name" /></p>
+    <p>Email: <input [(ngModel)]="user.email" placeholder="User Email" /></p>
+    <p>Phone: <input [(ngModel)]="user.phone" placeholder="User Phone" /></p>
+    <p>Address: <input [(ngModel)]="user.address" placeholder="User Address" /></p>
+    <p>Country: <input [(ngModel)]="user.country" placeholder="User Country" /></p>
+  </div>
+  <hr/>
+  <button class="go-back" (click)="goBack()">go back</button>
+  &nbsp;
+  <button class="save" (click)="save()">save</button>
+</div>

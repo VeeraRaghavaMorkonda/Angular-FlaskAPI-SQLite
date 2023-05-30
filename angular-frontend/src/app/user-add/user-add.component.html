@@ -1,0 +1,35 @@
+<div>
+  <h2>Add User Detail</h2>
+  <hr/>
+  <div>
+    <p>
+		<label>Name:
+			<input [(ngModel)]="user.name" placeholder="User Name"/>
+		</label>
+    </p>
+	<p>
+		<label>Email:
+			<input [(ngModel)]="user.email" placeholder="User Email"/>
+		</label>
+    </p>
+	<p>
+		<label>Phone:
+			<input [(ngModel)]="user.phone" placeholder="User Phone"/>
+		</label>
+    </p>
+    <p>
+		<label>Address:
+			<input [(ngModel)]="user.address" placeholder="User Address"/>
+		</label>
+    </p>
+    <p>
+		<label>Country:
+			<input [(ngModel)]="user.country" placeholder="User Country"/>
+		</label>
+    </p>
+  </div>
+  <hr/>
+  <button class="go-back" (click)="goBack()">go back</button>
+   &nbsp;
+  <button class="save" (click)="save()">save</button>
+</div>

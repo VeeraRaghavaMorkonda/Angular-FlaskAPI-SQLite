@@ -1,0 +1,38 @@
+<h3 align="center">User Management Web App</h3>
+<h4 style="text-align: center">(Angular-FlaskAPI-SQLite-API Architecture)</h4>
+
+<br/>
+<table class="table table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th style="text-align: center">ID</th>
+      <th style="text-align: center">Name</th>
+      <th style="text-align: center">Email</th>
+      <th style="text-align: center">Phone</th>
+      <th style="text-align: center">Address</th>
+      <th style="text-align: center">Country</th>
+      <th style="text-align: center">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.user_id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.phone }}</td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.country }}</td>
+      <td>
+        <a routerLink="/detail/{{ user.user_id }}">Detail</a>
+        &nbsp;
+        <a routerLink="/edit/{{ user.user_id }}">Edit</a>
+        &nbsp;
+        <button title="delete user" (click)="delete(user)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br/>
+<div>
+  <a routerLink="/add"> Add New User </a>
+</div>
